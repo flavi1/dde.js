@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    
+    <style>
+		html {
+			width: 500px;
+			font-size: 1.4rem;
+		    background-color: azure;
+		}
+
+		p,
+		dt {
+		  font-weight: bold;
+		  padding: 5px;
+		}
+
+		dd {
+		  margin-bottom: 1em;
+		  padding: 5px;
+		}
+
+
+		#modes .current {
+			background-color: lightgreen;
+		}
+
+		#modes #broken.current {
+			background-color: orangered;
+			color: white;
+		}
+
+
+		#enabled #mode {
+			font-style: italic;
+		}
+		
+		#javascript {
+			padding: 10px;
+			text-align: right;
+			font-size: 1rem;
+		}
+
+
+		.info {
+			text-align: right;
+		}
+
+    </style>
+  </head>
+
+	<body>
+		
+		<!--div id="themes" hidden>
+			<select id="style-theme-switcher"></select>
+		</div-->
+		
+		<div id="javascript">
+			<label><input type="checkbox" id="js-switcher" > Activer Javascript</label>
+		</div>
+
+		<div id="status">
+			<div id="unused">
+				Cette Page n'utilise pas DDE
+			</div>
+			
+			<div id="enabled" hidden>
+				Cette page utilise DDE version <span id="version">1.0</span> en mode <span id="mode">respectuous</span>.
+			</div>
+			
+			<div id="unknown" hidden>
+				Cette page utilise DDE dans une version inconnue. L'auteur est suceptible de fournir un support de cette version, ce qui necessite hélas l'activation de Javascript.
+			</div>
+			
+		</div>
+		
+		<div id="modes" hidden>
+			<p>Les différents modes :</p>
+
+			<dl>
+				<div id="strict">
+				  <dt>Strict</dt>
+				  <dd>Indique que la page n'utilise pas Javascript.</dd>
+				</div>
+				
+				<div id="respectuous">
+				  <dt>Respectuous</dt>
+				  <dd>Javascript apporte des améliorations facultatives.</dd>
+				</div>
+				
+				<div id="broken">
+				  <dt>Broken</dt>
+				  <dd>Pour certaines raisons, cette page ne fonctionnera hélas pas sans Javascript.</dd>
+				</div>
+			</dl>
+
+		</div>
+
+		<div class="info">
+			<a href="#todo">A quoi sert cette extension ?</a>
+		</div>
+		
+		<script src="popup.js"></script>
+		
+	</body>
+
+</html>

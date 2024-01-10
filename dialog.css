@@ -1,0 +1,109 @@
+
+.dde-dialog form {
+    text-align: center;
+}
+
+dialog.dde-dialog {
+    background-color: darkblue;
+    color: white;
+    font-weight: bold;
+    font-family: monospace;
+    font-size: 14px;
+
+    border: 0.875px solid;
+    border-left-width: 2px;
+    border-right-width: 2px;
+
+    padding-top: 6.125px;
+    padding-bottom: 7px;
+    padding-left: 2.5px;
+    padding-right: 3.5px;
+    box-shadow: inset 0 -3.5px 0 3px darkblue, inset 0 3.5px 0 3px darkblue, -3.5px -7px 0 0 darkblue, 2.5px 6.125px 0 0 darkblue, -3.5px 6.125px 0 0 darkblue, 2.5px -7px 0 0 darkblue, 14px 14px 15px 10px #4D4D4D;
+}
+
+.dde-dialog .body {
+    padding: 15px;
+    margin-top: 15px;
+}
+
+.dde-dialog button {
+    cursor: pointer;
+    font-weight: bold;
+    color: white;
+    background-color: #2196f3;
+    border: 0.875px solid white;
+    border-left-width: 2px;
+    border-right-width: 2px;
+    margin-top: 7px;
+    margin-bottom: 6.125px;
+    margin-left: 3.5px;
+    margin-right: 2.5px;
+    padding-top: 6.125px;
+    padding-bottom: 7px;
+    padding-left: 10.5px;
+    padding-right: 11.5px;
+    box-shadow: -3.5px -7px 0 0 #2196f3, 2.5px 6.125px 0 0 #2196f3, -3.5px 6.125px 0 0 #2196f3, 2.5px -7px 0 0 #2196f3;
+    -webkit-filter: drop-shadow(7px 8px 0 black);
+    filter: drop-shadow(7px 8px 0 black);
+    margin-right: 10.5px;
+    margin-bottom: 20px;
+	user-select: none;
+}
+
+.dde-dialog button:focus, .dde-dialog button:focus-visible {
+	outline: none;
+    background-color: #4CAF50;
+    box-shadow: -3.5px -7px 0 0 #4CAF50, 2.5px 6.125px 0 0 #4CAF50, -3.5px 6.125px 0 0 #4CAF50, 2.5px -7px 0 0 #4CAF50;
+}
+
+.dde-dialog button:not(.close):active {
+    position: relative;
+    top: 5px;
+    left: 3px;
+    filter: none;
+}
+
+.dde-dialog button:hover {
+    background-color: #FF5722;
+    box-shadow: #FF5722 -3.5px -7px 0px 0px, #FF5722 2.5px 6.125px 0px 0px, #FF5722 -3.5px 6.125px 0px 0px, #FF5722 2.5px -7px 0px 0px;
+}
+
+.dde-dialog button.close {
+    position: absolute;
+    top: 5px;
+    right: 0px;
+    padding: 3px;
+    border: none;
+
+    z-index: 1;
+    box-shadow: none;
+    display: inline-block;
+    background-color: slategray;
+}
+
+.dde-dialog button.close::before {
+    content: "< ";
+}
+
+.dde-dialog button.close::after {
+    content: " >";
+}
+
+.dde-dialog button.close:hover {
+    background-color: #FF5722;
+}
+.dde-dialog button.close:active {
+	filter: none;
+	top: 10px;
+	right: -3px;
+}
+
+.dde-dialog button.close:focus, .dde-dialog button.close:focus-visible {
+	outline: none;
+    background-color: #4CAF50;
+}
+
+.dde-dialog::backdrop {
+    background-color: #607d8b61;
+    backdrop-filter: sepia(90%) blur(2px);
+}
