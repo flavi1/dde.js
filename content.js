@@ -8,10 +8,8 @@ console.log('START CONTENT ON '+window.location.href, window.location)
 const ddePageInfo = (() => {
 	const doc = document.documentElement;
 	let attr = null;
-	if(doc.hasAttribute('dde'))
-		attr = doc.getAttribute('dde');
-	else if(doc.hasAttribute('data-dde'))
-		attr = doc.getAttribute('data-dde');
+	if(doc.hasAttribute('dde-version'))
+		attr = doc.getAttribute('dde-version');
   if(attr) {
 	attr = attr.split(' ')
 	const mode = attr[0]
