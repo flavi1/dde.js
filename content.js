@@ -32,10 +32,8 @@ const ddePageInfo = (() => {
 	
 	if(status == 'enabled') {
 		const updateDeclaration = mode + ' ' + version + ' native';
-		if(doc.hasAttribute('dde'))
-			doc.setAttribute('dde', updateDeclaration);
-		else if(doc.hasAttribute('data-dde'))
-			doc.setAttribute('data-dde', updateDeclaration);
+		if(doc.hasAttribute('dde-version'))
+			doc.setAttribute('dde-version', updateDeclaration);
 	}
 	
 	return {mode, reason, version, status}
